@@ -70,19 +70,18 @@ public class showLocationFolderFragment extends Fragment {
         File storageDir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/");
         if (!storageDir.exists()) storageDir.mkdirs();
         File[] locationFoldersNames = storageDir.listFiles();
-        if (locationFoldersNames.length > 0) {
-            for (int i = 0; i < locationFoldersNames.length; i++) {
-                adapter.addItem(new Folder(locationFoldersNames[i].getName()));
+        if (locationFoldersNames != null) {
+            if (locationFoldersNames.length > 0) {
+                for (int i = 0; i < locationFoldersNames.length; i++) {
+                    adapter.addItem(new Folder(locationFoldersNames[i].getName()));
+                }
+                gridView.setAdapter(adapter);
+            } else {
+                Toast.makeText(getActivity(), "폴더없음!", Toast.LENGTH_LONG).show();
             }
-            gridView.setAdapter(adapter);
-//            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                @Override
-//                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                    Toast.makeText(getContext(), position+"번째", Toast.LENGTH_LONG).show();
-//                }
-//            });
-        } else {
+        }else{
             Toast.makeText(getActivity(), "폴더없음!", Toast.LENGTH_LONG).show();
+
         }
         return v;
     }

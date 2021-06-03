@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
                             initDetector(image, photoFile, photoLocation); //위치 + 인물 구별해서 폴더에 저장
                         }
                     }
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.detach(fragment_showFolder).attach(fragment_showFolder).commit();
+//                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                    transaction.detach(fragment_showFolder).attach(fragment_showFolder).commit();
 
                 }
             }
