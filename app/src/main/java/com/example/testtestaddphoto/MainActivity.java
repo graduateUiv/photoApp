@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
                     } else {
                         System.out.println("인물 x!");
-                        File storageDir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + photoLocation + "/" + "인물X/");
+                        File storageDir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + photoLocation + "/" + "그 외 폴더/");
                         if (!storageDir.exists()) storageDir.mkdirs(); // 폴더가 존재하지 않는다면 생성
                         File savedImageFile = new File(storageDir, photoFile.getName());
 
