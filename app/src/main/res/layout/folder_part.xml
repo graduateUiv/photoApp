@@ -14,7 +14,8 @@
             android:id="@+id/folderButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@mipmap/foldericon_with_yellow" />
+            app:srcCompat="@drawable/foldericon_with_yellow"
+            android:background="#00ffffff"/>
 
         <TextView
             android:id="@+id/folderName"
