@@ -11,8 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * jhChoi - 201124
- * Canvas를 저장하거나 호출하는 클래스입니다.
+ * Canvas를 저장하거나 호출하는 클래스
  * */
 public class CanvasIO {
     private final static String TAG = Canvas.class.getName();
