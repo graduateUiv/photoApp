@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity implements itemClickListener
                         AlertDialog.Builder dlgSecond = new AlertDialog.Builder(MainActivity.this);
                         dlgSecond.setTitle("삭제할 폴더를 선택하세요.");
 
-                        String[] humanLabel = new String[]{"인물", "그 외 폴더", "전부삭제"};
+                        String[] humanLabel = new String[]{"인물", "음식","풍경" ,"전부삭제"};
                         String[] selectedItemsSecond = {"인물"};
 
                         dlgSecond.setSingleChoiceItems(humanLabel, 0, new DialogInterface.OnClickListener() {
@@ -261,13 +261,18 @@ public class MainActivity extends AppCompatActivity implements itemClickListener
                                     DeleteDir(dir.getPath());
                                     Toast.makeText(MainActivity.this, "지역폴더 삭제 완료", Toast.LENGTH_SHORT).show();
                                 }
-                                else if(selectedItemsSecond[0].equals("그 외 폴더")&& checkDir[0].exists()){
-                                    File dir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + selectedItem_[0] + "/그 외 폴더");
+                                else if(selectedItemsSecond[0].equals("음식")&& checkDir[0].exists()){
+                                    File dir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + selectedItem_[0] + "/음식");
                                     DeleteDir(dir.getPath());
                                     Toast.makeText(MainActivity.this, selectedItem_[0] + "의 " + selectedItemsSecond[0] + "삭제 완료", Toast.LENGTH_SHORT).show();
                                 }
                                 else if(selectedItemsSecond[0].equals("인물")&& checkDir[0].exists()){
                                     File dir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + selectedItem_[0] + "/인물");
+                                    DeleteDir(dir.getPath());
+                                    Toast.makeText(MainActivity.this, selectedItem_[0] + "의 " + selectedItemsSecond[0] + "폴더 삭제 완료", Toast.LENGTH_SHORT).show();
+                                }
+                                else if(selectedItemsSecond[0].equals("풍경")&& checkDir[0].exists()){
+                                    File dir = new File(Environment.getExternalStorageDirectory() + "/addPhoto/" + selectedItem_[0] + "/풍경");
                                     DeleteDir(dir.getPath());
                                     Toast.makeText(MainActivity.this, selectedItem_[0] + "의 " + selectedItemsSecond[0] + "폴더 삭제 완료", Toast.LENGTH_SHORT).show();
                                 }
