@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btnGallery"
+        android:icon="@drawable/ic_baseline_add_24"
+        app:showAsAction="always"
+        android:title="사진 추가" />
+
+    <item
+        android:id="@+id/btnRename"
+        android:title="폴더 수정"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/btnRemove"
+        android:title="폴더 삭제"
+        app:showAsAction="never"/>
+
+</menu>
